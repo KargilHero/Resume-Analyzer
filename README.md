@@ -1,46 +1,45 @@
-# AI Hiring Platform – Smart Resume Analyzer & Job Matcher
+## AI-Powered Hiring Platform
 
 ## Overview
 
-This project is a full-stack AI-powered hiring platform designed to streamline the recruitment process by intelligently analyzing resumes and matching candidates with suitable job roles.
+Smart Hire is a full-stack web application designed to streamline the recruitment process using intelligent resume analysis and candidate-job matching.
 
-The system processes uploaded resumes, extracts key information using Natural Language Processing (NLP), and evaluates candidate-job compatibility through a scoring mechanism.
+This project is inspired by existing open-source implementations and further explored to understand real-world system design involving frontend, backend, and machine learning integration.
 
 ---
 
-## Key Features
+## Features
 
-### Resume Analysis
+### For Job Seekers
 
-* Upload PDF resumes
-* Extract skills, education, and experience
-* Generate structured candidate profiles
+* Upload resume (PDF)
+* Automatic extraction of:
 
-### Intelligent Matching
+  * Skills
+  * Education
+  * Experience
+* Profile generation with minimal manual input
+* Get feedback on:
 
-* Match candidates with job roles
-* Calculate Job Fit Score (JFS)
-* Rank candidates based on relevance
+  * Missing skills
+  * Job suitability
 
-### Dashboard
+---
 
-* Visual representation of:
+### For Recruiters
 
-  * Skill match percentage
-  * Candidate ranking
-  * Resume insights
+* Create job postings with requirements
+* View candidate applications
+* Filter candidates based on relevance
+* Analyze applicants using scoring system
 
-### Recruiter Module
+---
 
-* Post job listings
-* View matched candidates
-* Filter applicants
+### AI / ML Capabilities
 
-### Candidate Module
-
-* Upload resume
-* Get personalized feedback
-* View suggested roles
+* Resume parsing using NLP techniques
+* Candidate-job matching
+* Job Fit Score (JFS) calculation (based on skills and criteria)
 
 ---
 
@@ -49,7 +48,7 @@ The system processes uploaded resumes, extracts key information using Natural La
 ### Frontend
 
 * React.js
-* Modern UI with responsive design
+* Next.js
 
 ### Backend
 
@@ -59,7 +58,7 @@ The system processes uploaded resumes, extracts key information using Natural La
 ### Machine Learning
 
 * Python
-* NLP-based resume parsing
+* Streamlit
 
 ### Database
 
@@ -67,93 +66,94 @@ The system processes uploaded resumes, extracts key information using Natural La
 
 ---
 
-## System Architecture
+## Project Structure
 
-```id="arch123"
-User Upload Resume
-        ↓
-Backend (Node.js)
-        ↓
-Resume Parsing + NLP
-        ↓
-ML Processing (Skill Extraction + Matching)
-        ↓
-Job Fit Score Calculation
-        ↓
-Results Stored in Database
-        ↓
-Frontend Dashboard Display
+```id="tree001"
+client/             → Frontend application  
+server/             → Backend APIs  
+resume-analyser/    → ML-based resume processing  
+cv-builder/         → Resume builder module  
+chat/               → Communication module  
 ```
 
 ---
 
-##  Project Structure
+## Local Setup
 
-```id="struct123"
-client/           → Frontend (React)
-server/           → Backend (Node.js)
-ml-module/        → Resume analysis (Python NLP)
-database/         → Data storage logic
+### 1. Clone the Repository
+
+```bash id="cmd001"
+git clone <your-repo-link>
 ```
 
 ---
 
-## Installation & Setup
+### 2. Start Frontend
 
-### 1. Clone Repository
-
-```bash
-git clone https://github.com/your-username/your-repo-name.git
-```
-
-### 2. Install Dependencies
-
-#### Frontend
-
-```bash
+```bash id="cmd002"
 cd client
 npm install
 npm start
 ```
 
-#### Backend
+---
 
-```bash
+### 3. Start Backend
+
+```bash id="cmd003"
 cd server
 npm install
-npm run dev
+npm start
 ```
 
-#### ML Module
+---
 
-```bash
-cd ml-module
+### 4. Run Resume Analyzer
+
+```bash id="cmd004"
+cd resume-analyser
 pip install -r requirements.txt
 python app.py
 ```
 
 ---
 
-##  Future Enhancements
+## System Flow
 
-*  Advanced ML models for better prediction
-*  Real-time analytics dashboard
-*  AI chatbot for career guidance
-*  Resume improvement suggestions using LLMs
-
----
-
-##  Key Learning Outcomes
-
-* Built a scalable full-stack application
-* Implemented NLP for real-world data processing
-* Designed a modular architecture with ML integration
-* Worked on candidate-job matching logic
+```id="flow001"
+User uploads resume
+        ↓
+Backend processes request
+        ↓
+Resume Analyzer extracts data
+        ↓
+Matching logic calculates score
+        ↓
+Results displayed on dashboard
+```
 
 ---
 
-##  Conclusion
+## Learning Outcomes
 
-This project demonstrates the integration of web development and machine learning to solve a real-world hiring problem. It highlights the ability to design, build, and scale intelligent systems.
+* Understanding full-stack architecture
+* Integrating ML with web applications
+* Working with REST APIs and modular systems
+* Resume parsing and data extraction techniques
+
+---
+
+## Note
+
+This project is based on an open-source implementation and has been used for learning and experimentation purposes. Further enhancements and custom features can be added to improve scalability and accuracy.
+
+---
+
+## Future Improvements
+
+* Advanced ML models for better prediction
+* Real-time analytics dashboard
+* AI-based career assistant chatbot
+* Improved ranking algorithms
 
 ---
