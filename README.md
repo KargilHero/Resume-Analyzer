@@ -98,7 +98,7 @@ database/         → Data storage logic
 
 ---
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 ### 1. Clone Repository
 
