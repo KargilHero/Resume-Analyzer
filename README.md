@@ -5,7 +5,7 @@
 Smart Hire is a full-stack web application designed to streamline the recruitment process using intelligent resume analysis and candidate-job matching.
 
 This project is inspired by existing open-source implementations and further explored to understand real-world system design involving frontend, backend, and machine learning integration.
-
+mjgbkjgb.kjh
 ---
 
 ## Features
